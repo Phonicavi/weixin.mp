@@ -1,4 +1,4 @@
 *.sh
 *.zip
-/SDK/WeChat.config.php
+SDK/WeChat.config.php
 *.bak
