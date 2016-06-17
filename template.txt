@@ -1,0 +1,112 @@
+测试号 微信号: gh_6e34bcb7537d
+
+event:
+[2016-06-17 04:36:45] [HTTP_RAW_POST_DATA] <xml><ToUserName><![CDATA[gh_6e34bcb7537d]]></ToUserName>
+<FromUserName><![CDATA[or86Zjl30M9Ev66P4djrrb116RnU]]></FromUserName>
+<CreateTime>1466109407</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+[2016-06-17 04:35:54] [HTTP_RAW_POST_DATA] <xml><ToUserName><![CDATA[gh_6e34bcb7537d]]></ToUserName>
+<FromUserName><![CDATA[or86Zjl30M9Ev66P4djrrb116RnU]]></FromUserName>
+<CreateTime>1466109357</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+[2016-06-17 14:33:37] [HTTP_RAW_POST_DATA] <xml><ToUserName><![CDATA[gh_6e34bcb7537d]]></ToUserName>
+<FromUserName><![CDATA[or86ZjqhWecfnTCckfeUtG7jkweI]]></FromUserName>
+<CreateTime>1466145220</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[LOCATION]]></Event>
+<Latitude>31.025446</Latitude>
+<Longitude>121.430832</Longitude>
+<Precision>40.000000</Precision>
+</xml>
+
+
+
+text:
+[2016-06-17 04:42:01] [HTTP_RAW_POST_DATA] <xml><ToUserName><![CDATA[gh_6e34bcb7537d]]></ToUserName>
+<FromUserName><![CDATA[or86Zjl30M9Ev66P4djrrb116RnU]]></FromUserName>
+<CreateTime>1466109724</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[github]]></Content>
+<MsgId>6296893317707079733</MsgId>
+</xml>
+
+
+
+表情:
+[2016-06-17 04:42:44] [HTTP_RAW_POST_DATA] <xml><ToUserName><![CDATA[gh_6e34bcb7537d]]></ToUserName>
+<FromUserName><![CDATA[or86Zjl30M9Ev66P4djrrb116RnU]]></FromUserName>
+<CreateTime>1466109766</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[【收到不支持的消息类型，暂无法显示】]]></Content>
+<MsgId>6296893498095706167</MsgId>
+</xml>
+
+名片:
+[2016-06-17 04:49:28] [QUERY_STRING] signature=2614c6f59682a8b3f5b77f181cef8b46239e08a9&timestamp=1466110171&nonce=745983309&openid=or86Zjl30M9Ev66P4djrrb116RnU
+[2016-06-17 04:49:28] [HTTP_RAW_POST_DATA] <xml><ToUserName><![CDATA[gh_6e34bcb7537d]]></ToUserName>
+<FromUserName><![CDATA[or86Zjl30M9Ev66P4djrrb116RnU]]></FromUserName>
+<CreateTime>1466110171</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[【收到不支持的消息类型，暂无法显示】]]></Content>
+<MsgId>6296895237557461101</MsgId>
+</xml>
+
+
+
+image:
+[2016-06-17 04:44:23] [HTTP_RAW_POST_DATA] <xml><ToUserName><![CDATA[gh_6e34bcb7537d]]></ToUserName>
+<FromUserName><![CDATA[or86Zjl30M9Ev66P4djrrb116RnU]]></FromUserName>
+<CreateTime>1466109866</CreateTime>
+<MsgType><![CDATA[image]]></MsgType>
+<PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz/BuQq5ZoGqS3caPaPh8FibrkAVb5micicQn68Ca4JO7QPBicnonWXqnHVGvwMpxp9jgiapEr1GczIehic4VsOQAEFad2w/0]]></PicUrl>
+<MsgId>6296893927592435769</MsgId>
+<MediaId><![CDATA[CrxHK6v-pEBAmo5E3Myabe0veAkIBLMK0UjTsrdQKnwv8nJzaf47pjCMzwPuGDBy]]></MediaId>
+</xml>
+
+
+
+voice:
+[2016-06-17 04:46:08] [HTTP_RAW_POST_DATA] <xml><ToUserName><![CDATA[gh_6e34bcb7537d]]></ToUserName>
+<FromUserName><![CDATA[or86Zjl30M9Ev66P4djrrb116RnU]]></FromUserName>
+<CreateTime>1466109971</CreateTime>
+<MsgType><![CDATA[voice]]></MsgType>
+<MediaId><![CDATA[Q-magGiwULHB_K-OWso6gsg1OzF6p8b7OD6MbIcpK_PTJD42OMflv1uRlWyK8Xsq]]></MediaId>
+<Format><![CDATA[amr]]></Format>
+<MsgId>6296894377784508416</MsgId>
+<Recognition><![CDATA[喂喂喂喂！你好吗你好吗！早上好！]]></Recognition>
+</xml>
+
+
+
+location:
+[2016-06-17 04:47:43] [HTTP_RAW_POST_DATA] <xml><ToUserName><![CDATA[gh_6e34bcb7537d]]></ToUserName>
+<FromUserName><![CDATA[or86Zjl30M9Ev66P4djrrb116RnU]]></FromUserName>
+<CreateTime>1466110066</CreateTime>
+<MsgType><![CDATA[location]]></MsgType>
+<Location_X>31.027083</Location_X>
+<Location_Y>121.438921</Location_Y>
+<Scale>15</Scale>
+<Label><![CDATA[上海市闵行区上海交通大学(闵行校区)内]]></Label>
+<MsgId>6296894786585894997</MsgId>
+</xml>
+
+
+
+shortvideo:
+[2016-06-17 04:48:24] [HTTP_RAW_POST_DATA] <xml><ToUserName><![CDATA[gh_6e34bcb7537d]]></ToUserName>
+<FromUserName><![CDATA[or86Zjl30M9Ev66P4djrrb116RnU]]></FromUserName>
+<CreateTime>1466110107</CreateTime>
+<MsgType><![CDATA[shortvideo]]></MsgType>
+<MediaId><![CDATA[sDbK0b2QEWMdoTgz4JwJjM8X_hDW6-2267AR4Xk12P8Qp8-Rc54MdsjjWWAz3lmY]]></MediaId>
+<ThumbMediaId><![CDATA[9ftsq0sCPbvEuVposfJLFDYbL9r3YXvKnLrLZSsMHAhq24i6_GPk-JtThwSwDaOF]]></ThumbMediaId>
+<MsgId>6296894962679554135</MsgId>
+</xml>
+
+
+
