@@ -6,7 +6,7 @@ date_default_timezone_set("PRC");
 */
 class HttpClient
 {
-	static private $log_file = "/home/web/weixin/logs/http.log";
+	static private $log_file = "/../logs/http.log";
 
 	static public function curl_get($url)
 	{
