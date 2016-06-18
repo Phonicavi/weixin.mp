@@ -6,11 +6,11 @@ date_default_timezone_set("PRC");
 */
 class HttpClient
 {
-	private $log_file = "/home/web/weixin/logs/http.log";
+	static private $log_file = "/home/web/weixin/logs/http.log";
 
 	static public function curl_get($url)
 	{
-		// $this->log("URL = ".$url);
+		self::log("URL = ".$url);
 		$ch = curl_init();
 		curl_setopt_array($ch, array(
 			CURLOPT_URL => $url,
@@ -21,14 +21,14 @@ class HttpClient
 		));
 		$data = curl_exec($ch);
 		curl_close($ch);
-		// $this->log("return data:\n".$data);
+		self::log("return data:\n".$data);
 		return $data;
 	}
 
 	static public function curl_post($url, $param)
 	{
-		// $this->log("POST-URL = ".$url);
-		// $this->log("POST-PARM = ".$param);
+		self::log("POST-URL = ".$url);
+		self::log("POST-PARM = ".$param);
 		$ch = curl_init();
 		curl_setopt_array($ch, array(
 			CURLOPT_URL => $url,
@@ -41,13 +41,13 @@ class HttpClient
 		));
 		$data = curl_exec($ch);
 		curl_close($ch);
-		// $this->log("return data:\n".$data);
+		self::log("return data:\n".$data);
 		return $data;
 	}
 
-	private function log($contents)
+	static private function log($contents)
 	{
 		$log = date('[Y-m-d H:i:s] ').$contents."\n";
-		file_put_contents($this->log_file, $log, FILE_APPEND);
+		file_put_contents(__DIR__.self::$log_file, $log, FILE_APPEND);
 	}
 }
