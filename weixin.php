@@ -47,6 +47,16 @@ if ($type === 'text') {
 			$replyStr = "http://electsys.sjtu.edu.cn";
 		} elseif ($keyword === "mail") {
 			$replyStr = "http://mail.sjtu.edu.cn";
+		} elseif ($keyword === "jisuan") {
+			$replyStr = "http://www.jisuanke.com";
+		} elseif ($keyword === "poj") {
+			$replyStr = "http://poj.org";
+		} elseif ($keyword === "leet") {
+			$replyStr = "https://leetcode.com/problemset/algorithms/";
+		} elseif ($keyword === "oj") {
+			$replyStr = "http://acm.sjtu.edu.cn/onlinejudge/problems";
+		} elseif ($keyword === "lib") {
+			$replyStr = "http://www.lib.sjtu.edu.cn";
 		} else {
 			$replyStr = "Hello User:".$user_id." \n ".$keyword;
 			$replyStr .= "\n 请输入想去的网址";
@@ -62,8 +72,7 @@ if ($type === 'text') {
 	$reply = $weixin->generate_text('Hello 你发送了地址'.$user_id);
 } elseif ($type === 'image') { // 用户发送的是图片
 	// $reply = $weixin->generate_text('Hello 你发送了图片'.$user_id);
-	// $media_id = "CrxHK6v-pEBAmo5E3Myabe0veAkIBLMK0UjTsrdQKnwv8nJzaf47pjCMzwPuGDBy";
-	$media_id = "jVYpsyRgxf7u5l4FYm73sJ-Q0iG1wys6cF8_phAisAVbO243B0Ii7Q87VNltO69i";
+	$media_id = "3-6Z7STd7UScnLmnfyDOgODEgFn2H4lnTuEGgqCee_gD3QuRb09rd7Kx9E2visyZ";
 	$reply = $weixin->generate_image($media_id);
 } elseif ($type === 'voice') { // 用户发送的是声音
 	$reply = $weixin->generate_text('Hello 你发送了声音'.$user_id);

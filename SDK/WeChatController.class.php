@@ -1,5 +1,6 @@
 <?php
-include_once("WeChat.config.php");
+include_once __DIR__."/WeChat.config.php";
+include_once __DIR__."/HttpClient.php";
 date_default_timezone_set("PRC");
 
 /**
@@ -13,6 +14,8 @@ class WeChatController
 	private $appsecret = WeChatConfig::APPSECRET;
 	private $token = WeChatConfig::TOKEN;
 	private $log_path = WeChatConfig::PATH_LOGGING;
+	private $redis_host = WeChatConfig::REDISHOST;
+	private $redis_port = WeChatConfig::REDISPORT;
 
 	public $debug = FALSE;
 	public $msg_type = 'text';
@@ -21,6 +24,18 @@ class WeChatController
 	public function __construct($debug=FALSE)
 	{
 		$this->debug = $debug;
+		$redis = new Redis();
+		$redis->connect($this->redis_host, $this->redis_port);
+
+		$access_token = '';
+		if ($redis->exists('access_token')) {
+			$access_token = $redis->get('access_token');
+		} else {
+			$access_token = $this->get_access_token();
+			$redis->setex('access_token', 6000, $access_token);
+		}
+		$redis->close();
+		$this->access_token = $access_token;
 	}
 
 	public function get_message()
@@ -158,21 +173,21 @@ class WeChatController
 		else return false;
 	}
 
-	public function get_access_token()
+	private function get_access_token()
 	{
 		$get_access_token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$this->appid."&secret=".$this->appsecret;
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $get_access_token_url);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		$res = curl_exec($ch);
-		// var_dump($res);
-		curl_close($ch);
+		$res = HttpClient::curl_get($get_access_token_url);
 		// 这里要想办法应对微信接口返回错误的情况
-		$json_obj = json_decode($res, true);
+		$json_obj = json_decode($res, TRUE);
 		$access_token = $json_obj['access_token'];
 		$limits = $json_obj['expires_in']; // 7200.sec
 
 		return $access_token;
+	}
+
+	public function show_access_token()
+	{
+		return $this->access_token;
 	}
 }
 

@@ -10,6 +10,10 @@ class WeChatConfig
 	const APPSECRET = "";
 	const TOKEN = "phonicavi";
 
+	// Redis-server
+	const REDISHOST = "";
+	const REDISPORT = "";
+	
 	// Log-files PATH
 	const PATH_LOGGING = "/home/web/weixin/logs/";
 
